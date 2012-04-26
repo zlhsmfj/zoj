@@ -1,0 +1,32 @@
+#include<stdio.h>
+main()
+{
+ int i,j,d,e,t;
+ for(i=1000;i<10000;i++)
+ {
+  d=0;
+  e=0;
+  t=0;
+  j=i;
+  while(j)
+  {
+   d=d+j%10;
+   j=j/10;
+  }
+  j=i;
+  while(j)
+  {
+   e=e+j%16;
+   j=j/16;
+  }
+  j=i;
+  while(j)
+  {
+   t=t+j%12;
+   j=j/12;
+  }
+  if(d==e&&e==t)
+  printf("%d\n",i);
+ }
+}
+
